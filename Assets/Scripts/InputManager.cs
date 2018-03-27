@@ -4,7 +4,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour {
 
 	private SpriteRenderer s_renderer;
-	private CharacterController c_controller;
+
 	private const int LEFT = 0;
 	private const int RIGHT = 1;
 	[SerializeField]
@@ -19,8 +19,7 @@ public class InputManager : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		s_renderer = GetComponent<SpriteRenderer>();
-		c_controller = GetComponent<CharacterController>();
-		if(!s_renderer || !c_controller)
+		if(!s_renderer)
 		{
 			Debug.LogError("Invalid Component Setting");
 		}
@@ -31,7 +30,7 @@ public class InputManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float horizon_v = Input.GetAxis("Horizontal");
-		c_controller.Move(new Vector3(horizon_v * Time.deltaTime * speed, 0, 0 ));
+		transform.Translate(new Vector3(horizon_v * Time.deltaTime * speed, 0, 0 ));
 
 		if(horizon_v<0)
 		{
@@ -52,21 +51,13 @@ public class InputManager : MonoBehaviour {
 		if(!ground)
 		{
 			float yDelta = (gravityAccelerate * 2 - gravityAccelerate*(Time.time - timeBucket)) * Time.deltaTime;
-			c_controller.Move(new Vector3(0, yDelta , 0));
-			SimulateFakeGravity();
+            transform.Translate(new Vector3(0, yDelta , 0));
 		}
 	}
 
-	private void OnControllerColliderHit(ControllerColliderHit hit) {
-		Debug.Log("OnCollision");
-		if(gameObject.transform.position.y - hit.collider.gameObject.transform.position.y > 0)
-		{
-			ground = true;
-		}
-	}
+    private void OnCollisionEnter2D(Collision2D coll)
+    {
+        ground = true;
+    }
 
-	private void SimulateFakeGravity()
-	{
-		c_controller.Move(new Vector3(0, -gravityAccelerate * Time.deltaTime, 0));
-	}
 }
