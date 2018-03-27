@@ -46,7 +46,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\LogueLikeAssets\Completed\Scripts\BoardManager.cs" />
+     <Compile Include="Assets\LogueLikeAssets\Completed\Scripts\Enemy.cs" />
+     <Compile Include="Assets\LogueLikeAssets\Completed\Scripts\GameManager.cs" />
+     <Compile Include="Assets\LogueLikeAssets\Completed\Scripts\Loader.cs" />
+     <Compile Include="Assets\LogueLikeAssets\Completed\Scripts\MovingObject.cs" />
+     <Compile Include="Assets\LogueLikeAssets\Completed\Scripts\Player.cs" />
+     <Compile Include="Assets\LogueLikeAssets\Completed\Scripts\SoundManager.cs" />
+     <Compile Include="Assets\LogueLikeAssets\Completed\Scripts\Wall.cs" />
+     <Compile Include="Assets\LogueLikeAssets\TutorialInfo\Scripts\TutorialInfo.cs" />
+     <Compile Include="Assets\Scripts\InputManager.cs" />
+     <Compile Include="Assets\Scripts\SourceTreeTest.cs" />
      <Compile Include="Assets\Scripts\Test.cs" />
+     <None Include="Assets\Art\voxel-pack\Spritesheets\spritesheet_particles.xml" />
+     <None Include="Assets\Art\kenney_foliagepack\License.txt" />
+     <None Include="Assets\Art\voxel-pack\License.txt" />
+     <None Include="Assets\Art\voxel-pack\Spritesheets\spritesheet_items.xml" />
+     <None Include="Assets\Art\platformer-pack-medieval\Spritesheet\medieval_spritesheet.xml" />
+     <None Include="Assets\LogueLikeAssets\TutorialInfo\Fonts\LICENSE.txt" />
+     <None Include="Assets\Art\voxel-pack\Spritesheets\spritesheet_tiles.xml" />
+     <None Include="Assets\LogueLikeAssets\Fonts\OFL.txt" />
+     <None Include="Assets\Art\kenney_foliagepack\Spritesheet\foliagePack_default.xml" />
+     <None Include="Assets\Art\platformer-pack-medieval\License.txt" />
+     <None Include="Assets\Art\kenney_foliagepack\Spritesheet\foliagePack_retina.xml" />
+     <None Include="Assets\Art\voxel-pack\Spritesheets\spritesheet_characters.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
