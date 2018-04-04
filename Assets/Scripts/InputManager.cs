@@ -58,6 +58,7 @@ public class InputManager : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D coll)
     {
         ground = true;
+		// Debug.Log("grounded");
     }
 
 }
