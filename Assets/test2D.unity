@@ -179,17 +179,14 @@ GameObject:
 --- !u!114 &41059901
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114890874203437358, guid: e9f31e76a7e076c4abfe24a6b6c4e9a0,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 41059900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 353722b9ff9b8864a8367c41fa5e927c, type: 3}
+  m_Script: {fileID: 11500000, guid: 51e767b16011f99469f4f65c2333cbe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  gravityAccelerate: 5
 --- !u!70 &41059902
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
